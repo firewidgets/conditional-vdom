@@ -166,5 +166,44 @@ describe('cvdom', function() {
         );
     });
 
+    if (TESTS["05"])
+    it('05-SectionWithViews', function (done) {
+        return CVDOM.html2hscript(
+            FS.readFileSync(PATH.join(__dirname, "05-SectionWithViews/template.htm"), "utf8").replace(/^\s*|\s*$/g, ""),
+            options,
+            function (err, chscript) {
+                if (err) return done(err);
+                compare("05-SectionWithViews/result-1", render(chscript, {
+                    "$views": {
+                        "focus": true
+                    },
+                    "item": [
+                        {
+                            "$views": {
+                                "default": true,
+                                "active": false,
+                                "focus": false
+                            },
+                            "label": "Item 1"
+                        },
+                        {
+                            "$views": {
+                                "active": true
+                            },
+                            "label": "Item 2"
+                        },
+                        {
+                            "$views": {
+                                "active": true,
+                                "focus": false
+                            },
+                            "label": "Item 3"
+                        }
+                    ]
+                }));
+                return done();
+            }
+        );
+    });
 
 });

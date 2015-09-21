@@ -30,8 +30,20 @@ module.exports = function (controllingState) {
         ) {
             // We have a section container that can repeat its content based on data
             controllingStateStack.push(controllingState);
+            var parentControllingState = controllingState;
             var result = controllingState[conditionalControls.section].map(function (subConditionalControls) {
-                controllingState = subConditionalControls;
+                controllingState = Object.create(subConditionalControls);
+
+                // Inherit views to data sub-nodes
+                if (parentControllingState["$views"]) {
+                    controllingState["$views"] = Object.create(controllingState["$views"] || {});
+                    for (var name in parentControllingState["$views"]) {
+                        if (typeof controllingState["$views"][name] === "undefined") {
+                            controllingState["$views"][name] = parentControllingState["$views"][name];
+                        }
+                    }
+                }
+
                 return conditionalSection();
             });
             controllingState = controllingStateStack.pop();

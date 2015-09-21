@@ -8,9 +8,7 @@
         {
             "tagName": "DIV",
             "properties": {
-                "attributes": {
-                    "component:view": "default"
-                }
+                "attributes": {}
             },
             "children": [
                 {
@@ -29,9 +27,7 @@
         {
             "tagName": "DIV",
             "properties": {
-                "attributes": {
-                    "component:view": "alternative"
-                }
+                "attributes": {}
             },
             "children": [
                 {

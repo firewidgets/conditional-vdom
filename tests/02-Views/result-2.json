@@ -8,9 +8,7 @@
         {
             "tagName": "DIV",
             "properties": {
-                "attributes": {
-                    "component:view": "default"
-                }
+                "attributes": {}
             },
             "children": [
                 {

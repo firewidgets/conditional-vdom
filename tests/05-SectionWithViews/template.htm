@@ -1,12 +1,12 @@
 
 <ul component:section="item">
     <li component:section="item" component:view="default">
-        <span>Label</span>
+        <span component:prop="label">Label</span>
         <span component:view="focus">Label Focus!</span>
     </li>
     <li component:section="item" component:view="active">
-        <span>Label (active)</span>
-        <span component:view="focus">Label (active) Focus!</span>
+        <span component:prop="label">Label</span> (active)
+        <span component:view="focus"><span component:prop="label">Label</span> (active) Focus!</span>
     </li>
 </ul>
 

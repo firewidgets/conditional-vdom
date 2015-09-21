@@ -8,20 +8,107 @@
         {
             "tagName": "UL",
             "properties": {
-                "attributes": {
-                    "component:section": "item"
-                }
+                "attributes": {}
             },
             "children": [
                 {
                     "text": "\n        "
                 },
                 {
+                    "tagName": "LI",
+                    "properties": {
+                        "attributes": {}
+                    },
+                    "children": [
+                        {
+                            "text": "\n            "
+                        },
+                        {
+                            "tagName": "SPAN",
+                            "properties": {
+                                "attributes": {}
+                            },
+                            "children": [
+                                {
+                                    "text": "Item 1"
+                                }
+                            ],
+                            "namespace": null,
+                            "count": 1,
+                            "hasWidgets": false,
+                            "hasThunks": false,
+                            "descendantHooks": false
+                        },
+                        {
+                            "text": "\n        "
+                        }
+                    ],
+                    "namespace": null,
+                    "count": 4,
+                    "hasWidgets": false,
+                    "hasThunks": false,
+                    "descendantHooks": false
+                },
+                {
                     "text": "\n    "
                 }
             ],
             "namespace": null,
-            "count": 2,
+            "count": 7,
+            "hasWidgets": false,
+            "hasThunks": false,
+            "descendantHooks": false
+        },
+        {
+            "tagName": "UL",
+            "properties": {
+                "attributes": {}
+            },
+            "children": [
+                {
+                    "text": "\n        "
+                },
+                {
+                    "tagName": "LI",
+                    "properties": {
+                        "attributes": {}
+                    },
+                    "children": [
+                        {
+                            "text": "\n            "
+                        },
+                        {
+                            "tagName": "SPAN",
+                            "properties": {
+                                "attributes": {}
+                            },
+                            "children": [
+                                {
+                                    "text": "Item 2"
+                                }
+                            ],
+                            "namespace": null,
+                            "count": 1,
+                            "hasWidgets": false,
+                            "hasThunks": false,
+                            "descendantHooks": false
+                        },
+                        {
+                            "text": "\n        "
+                        }
+                    ],
+                    "namespace": null,
+                    "count": 4,
+                    "hasWidgets": false,
+                    "hasThunks": false,
+                    "descendantHooks": false
+                },
+                {
+                    "text": "\n    "
+                }
+            ],
+            "namespace": null,
+            "count": 7,
             "hasWidgets": false,
             "hasThunks": false,
             "descendantHooks": false
@@ -31,7 +118,7 @@
         }
     ],
     "namespace": null,
-    "count": 5,
+    "count": 18,
     "hasWidgets": false,
     "hasThunks": false,
     "descendantHooks": false

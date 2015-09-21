@@ -15,9 +15,9 @@ exports.makeLib = function () {
 
 exports.forLib = function (LIB) {
 
-    function html2hscript (html, callback) {
+    function html2hscript (html, options, callback) {
 
-        return LIB.html2hscript(html, function (err, chscript) {
+        return LIB.html2hscript(html, options, function (err, chscript) {
 
             return callback(null, chscript);
         });

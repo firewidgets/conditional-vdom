@@ -25,7 +25,14 @@ var TESTS = {
 
 
 describe('cvdom', function() {
-    
+
+    const options = {
+        "controlAttributes": {
+            "prefix": "component:",
+            "remove": true
+        }
+    };
+
     function compare (resultPath, result) {
 
 //console.log("result", result);
@@ -53,16 +60,17 @@ describe('cvdom', function() {
     it('01-View', function (done) {
         return CVDOM.html2hscript(
             FS.readFileSync(PATH.join(__dirname, "01-View/template.htm"), "utf8").replace(/^\s*|\s*$/g, ""),
+            options,
             function (err, chscript) {
                 if (err) return done(err);
                 compare("01-View/result-1", render(chscript, {
-                    "views": [
-                        "default"
-                    ]
+                    "$views": {
+                        "default": true
+                    }
                 }));
                 compare("01-View/result-2", render(chscript, {
-                    "views": [
-                    ]
+                    "$views": {
+                    }
                 }));
                 return done();
             }
@@ -73,27 +81,28 @@ describe('cvdom', function() {
     it('02-Views', function (done) {
         return CVDOM.html2hscript(
             FS.readFileSync(PATH.join(__dirname, "02-Views/template.htm"), "utf8").replace(/^\s*|\s*$/g, ""),
+            options,
             function (err, chscript) {
                 if (err) return done(err);
                 compare("02-Views/result-1", render(chscript, {
-                    "views": [
-                    ]
+                    "$views": {
+                    }
                 }));
                 compare("02-Views/result-2", render(chscript, {
-                    "views": [
-                        "default"
-                    ]
+                    "$views": {
+                        "default": true
+                    }
                 }));
                 compare("02-Views/result-3", render(chscript, {
-                    "views": [
-                        "alternative"
-                    ]
+                    "$views": {
+                        "alternative": true
+                    }
                 }));
                 compare("02-Views/result-4", render(chscript, {
-                    "views": [
-                        "default",
-                        "alternative"
-                    ]
+                    "$views": {
+                        "default": true,
+                        "alternative": true
+                    }
                 }));
                 return done();
             }
@@ -104,9 +113,24 @@ describe('cvdom', function() {
     it('03-Section', function (done) {
         return CVDOM.html2hscript(
             FS.readFileSync(PATH.join(__dirname, "03-Section/template.htm"), "utf8").replace(/^\s*|\s*$/g, ""),
+            options,
             function (err, chscript) {
                 if (err) return done(err);
                 compare("03-Section/result-1", render(chscript, {
+                    "item": [
+                        {
+                            "$views": {
+                                "default": true
+                            },
+                            "label": "Item 1"
+                        },
+                        {
+                            "$views": {
+                                "default": true
+                            },
+                            "label": "Item 2"
+                        }
+                    ]
                 }));
                 return done();
             }

@@ -11,9 +11,7 @@
         {
             "tagName": "DIV",
             "properties": {
-                "attributes": {
-                    "component:view": "alternative"
-                }
+                "attributes": {}
             },
             "children": [
                 {

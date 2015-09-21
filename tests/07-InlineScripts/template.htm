@@ -1,0 +1,42 @@
+
+<div>
+    <div data-component-id="list">
+        <ul data-component-section="item">
+            <li data-component-section="item" data-component-view="default">
+                <span data-component-prop="label">Label</span>
+                <span data-component-view="focus">Focus!</span>
+            </li>
+            <li data-component-section="item" data-component-view="active">
+                <span data-component-prop="label">Label</span> (active)
+                <span data-component-view="focus">Focus! (active)</span>
+            </li>
+        </ul>
+        
+        <span data-component-view="focus">Focus!</span>
+    </div>
+    
+    <script data-component-id="list" data-component-location="window">
+    context.getData = function () {
+        return {
+            "$views": {
+                "focus": true
+            },
+            "item": [
+                {
+                    "$views": {
+                        "default": true,
+                        "focus": false
+                    },
+                    "label": "Item 1"
+                },
+                {
+                    "$views": {
+                        "active": true
+                    },
+                    "label": "Item 2"
+                }
+            ]
+        };
+    };
+    </script>
+</div>

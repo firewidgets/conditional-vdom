@@ -21,7 +21,8 @@ var TESTS = {
     "03": true,
     "04": true,
     "05": true,
-    "06": true
+    "06": true,
+    "07": true
 };
 
 
@@ -232,6 +233,28 @@ describe('cvdom', function() {
                         }
                     ]
                 }));
+                return done();
+            }
+        );
+    });
+
+    if (TESTS["07"])
+    it('07-InlineScripts', function (done) {
+        return CVDOM.html2hscript(
+            FS.readFileSync(PATH.join(__dirname, "07-InlineScripts/template.htm"), "utf8").replace(/^\s*|\s*$/g, ""),
+            {
+                "controlAttributes": {
+                    "prefix": "data-component-",
+                    "remove": true
+                }
+            },
+            function (err, chscript, inlineScripts) {
+                if (err) return done(err);
+                var context = {};
+                var scriptFunc = new Function ("context", inlineScripts[0].code);
+                scriptFunc(context);
+                var controllingState = context.getData();
+                compare("07-InlineScripts/result-1", render(chscript, controllingState));
                 return done();
             }
         );

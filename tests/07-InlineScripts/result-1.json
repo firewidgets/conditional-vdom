@@ -1,0 +1,196 @@
+{
+    "tagName": "DIV",
+    "properties": {},
+    "children": [
+        {
+            "text": "\n    "
+        },
+        {
+            "tagName": "DIV",
+            "properties": {
+                "dataset": {
+                    "componentId": "list"
+                }
+            },
+            "children": [
+                {
+                    "text": "\n        "
+                },
+                {
+                    "tagName": "UL",
+                    "properties": {
+                        "dataset": {}
+                    },
+                    "children": [
+                        {
+                            "text": "\n            "
+                        },
+                        {
+                            "tagName": "LI",
+                            "properties": {
+                                "dataset": {}
+                            },
+                            "children": [
+                                {
+                                    "text": "\n                "
+                                },
+                                {
+                                    "tagName": "SPAN",
+                                    "properties": {
+                                        "dataset": {}
+                                    },
+                                    "children": [
+                                        {
+                                            "text": "Item 1"
+                                        }
+                                    ],
+                                    "namespace": null,
+                                    "count": 1,
+                                    "hasWidgets": false,
+                                    "hasThunks": false,
+                                    "descendantHooks": false
+                                },
+                                {
+                                    "text": "\n                "
+                                },
+                                {
+                                    "text": "\n            "
+                                }
+                            ],
+                            "namespace": null,
+                            "count": 5,
+                            "hasWidgets": false,
+                            "hasThunks": false,
+                            "descendantHooks": false
+                        },
+                        {
+                            "text": "\n            "
+                        },
+                        {
+                            "text": "\n        "
+                        }
+                    ],
+                    "namespace": null,
+                    "count": 9,
+                    "hasWidgets": false,
+                    "hasThunks": false,
+                    "descendantHooks": false
+                },
+                {
+                    "tagName": "UL",
+                    "properties": {
+                        "dataset": {}
+                    },
+                    "children": [
+                        {
+                            "text": "\n            "
+                        },
+                        {
+                            "text": "\n            "
+                        },
+                        {
+                            "tagName": "LI",
+                            "properties": {
+                                "dataset": {}
+                            },
+                            "children": [
+                                {
+                                    "text": "\n                "
+                                },
+                                {
+                                    "tagName": "SPAN",
+                                    "properties": {
+                                        "dataset": {}
+                                    },
+                                    "children": [
+                                        {
+                                            "text": "Item 2"
+                                        }
+                                    ],
+                                    "namespace": null,
+                                    "count": 1,
+                                    "hasWidgets": false,
+                                    "hasThunks": false,
+                                    "descendantHooks": false
+                                },
+                                {
+                                    "text": " (active)\n                "
+                                },
+                                {
+                                    "tagName": "SPAN",
+                                    "properties": {
+                                        "dataset": {}
+                                    },
+                                    "children": [
+                                        {
+                                            "text": "Focus! (active)"
+                                        }
+                                    ],
+                                    "namespace": null,
+                                    "count": 1,
+                                    "hasWidgets": false,
+                                    "hasThunks": false,
+                                    "descendantHooks": false
+                                },
+                                {
+                                    "text": "\n            "
+                                }
+                            ],
+                            "namespace": null,
+                            "count": 7,
+                            "hasWidgets": false,
+                            "hasThunks": false,
+                            "descendantHooks": false
+                        },
+                        {
+                            "text": "\n        "
+                        }
+                    ],
+                    "namespace": null,
+                    "count": 11,
+                    "hasWidgets": false,
+                    "hasThunks": false,
+                    "descendantHooks": false
+                },
+                {
+                    "text": "\n        \n        "
+                },
+                {
+                    "tagName": "SPAN",
+                    "properties": {
+                        "dataset": {}
+                    },
+                    "children": [
+                        {
+                            "text": "Focus!"
+                        }
+                    ],
+                    "namespace": null,
+                    "count": 1,
+                    "hasWidgets": false,
+                    "hasThunks": false,
+                    "descendantHooks": false
+                },
+                {
+                    "text": "\n    "
+                }
+            ],
+            "namespace": null,
+            "count": 27,
+            "hasWidgets": false,
+            "hasThunks": false,
+            "descendantHooks": false
+        },
+        {
+            "text": "\n    \n    "
+        },
+        {
+            "text": "\n"
+        }
+    ],
+    "namespace": null,
+    "count": 31,
+    "hasWidgets": false,
+    "hasThunks": false,
+    "descendantHooks": false
+}

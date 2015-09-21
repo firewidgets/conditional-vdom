@@ -1,0 +1,35 @@
+{
+    "tagName": "DIV",
+    "properties": {},
+    "children": [
+        {
+            "text": "\n    "
+        },
+        {
+            "tagName": "DIV",
+            "properties": {
+                "attributes": {
+                    "component:view": "default"
+                }
+            },
+            "children": [
+                {
+                    "text": "\n        Default\n    "
+                }
+            ],
+            "namespace": null,
+            "count": 1,
+            "hasWidgets": false,
+            "hasThunks": false,
+            "descendantHooks": false
+        },
+        {
+            "text": "\n"
+        }
+    ],
+    "namespace": null,
+    "count": 4,
+    "hasWidgets": false,
+    "hasThunks": false,
+    "descendantHooks": false
+}

@@ -1,0 +1,38 @@
+{
+    "tagName": "DIV",
+    "properties": {},
+    "children": [
+        {
+            "text": "\n    "
+        },
+        {
+            "tagName": "UL",
+            "properties": {
+                "attributes": {
+                    "component:section": "item"
+                }
+            },
+            "children": [
+                {
+                    "text": "\n        "
+                },
+                {
+                    "text": "\n    "
+                }
+            ],
+            "namespace": null,
+            "count": 2,
+            "hasWidgets": false,
+            "hasThunks": false,
+            "descendantHooks": false
+        },
+        {
+            "text": "\n"
+        }
+    ],
+    "namespace": null,
+    "count": 5,
+    "hasWidgets": false,
+    "hasThunks": false,
+    "descendantHooks": false
+}

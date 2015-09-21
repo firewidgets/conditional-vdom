@@ -5,24 +5,26 @@ exports.makeLib = function () {
         path: require("path"),
         fs: require("fs"),
         _: require("lodash"),
-        cvdom: exports
-    }    
+        cvdom: exports,
+        html2hscript: require("../html2hscript"),
+        h: require("virtual-dom/h"),
+        ch: require("./ch")
+    }
 }
 
 
 exports.forLib = function (LIB) {
 
-    const EVENTS = require("events");
+    function html2hscript (html, callback) {
 
-    
-    var CVDOM = function () {
-        var cvdom = this;
+        return LIB.html2hscript(html, function (err, chscript) {
 
-        cvdom.parseFile = function (path, options, callback) {
-
-            return callback(null);
-        }
+            return callback(null, chscript);
+        });
     }
-    
-    return CVDOM;
+
+    return {
+        html2hscript: html2hscript
+    };
 }
+

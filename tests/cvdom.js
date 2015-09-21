@@ -137,5 +137,34 @@ describe('cvdom', function() {
         );
     });
 
+    if (TESTS["04"])
+    it('04-Sections', function (done) {
+        return CVDOM.html2hscript(
+            FS.readFileSync(PATH.join(__dirname, "04-Sections/template.htm"), "utf8").replace(/^\s*|\s*$/g, ""),
+            options,
+            function (err, chscript) {
+                if (err) return done(err);
+                compare("04-Sections/result-1", render(chscript, {
+                    "item": [
+                        {
+                            "$views": {
+                                "default": true,
+                                "active": false
+                            },
+                            "label": "Item 1"
+                        },
+                        {
+                            "$views": {
+                                "active": true
+                            },
+                            "label": "Item 2"
+                        }
+                    ]
+                }));
+                return done();
+            }
+        );
+    });
+
 
 });

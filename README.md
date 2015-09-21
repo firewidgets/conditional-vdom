@@ -1,6 +1,19 @@
 cvdom
 =====
 
+Conditional [virtual-dom](https://github.com/Matt-Esch/virtual-dom) templates to inject data and repeat/skip sections as the template renders by calling `h`. We splice in our own controller called `ch` which is required at runtime just like `h`.
+
+
+Install
+-------
+
+    npm install cvdom
+
+
+Test
+----
+
+    npm test
 
 
 History
@@ -17,3 +30,9 @@ Ultimately one should be able to write an adapter to run existing `domplate` mod
 `domplate` is important because it uses a runtime representation that does NOT reflect original source logic details. i.e. Its a runtime format that can be used to keep hard-earned higher order logic hidden as it is removed in the compile process. `hscript` has the same benefit but ultimately `domplate` compiles to a lower level of the DOM due to it also dealing with event handlers.
 
 A potential improvement over `domplate` could be the `incremental-dom` approach HOWEVER it has yet to be proven if a DOM *generator* like `incremental-dom` is superior over JS code operating directly on the DOM like `domplate` does.
+
+
+Provenance
+==========
+
+Original source logic [UNLICENSED](http://unlicense.org/) by [Christoph Dorn](http://christophdorn.com)

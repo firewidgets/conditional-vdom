@@ -1,0 +1,14 @@
+{
+  "name": "cvdom",
+  "version": "0.0.1",
+  "main": "cvdom.js",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.0"
+  },
+  "scripts": {
+    "test": "mocha tests/*.js"
+  }
+}

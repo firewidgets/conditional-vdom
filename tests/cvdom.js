@@ -20,7 +20,8 @@ var TESTS = {
     "02": true,
     "03": true,
     "04": true,
-    "05": true
+    "05": true,
+    "06": true
 };
 
 
@@ -198,6 +199,36 @@ describe('cvdom', function() {
                                 "focus": false
                             },
                             "label": "Item 3"
+                        }
+                    ]
+                }));
+                return done();
+            }
+        );
+    });
+
+    if (TESTS["06"])
+    it('06-DataBasedAttributes', function (done) {
+        return CVDOM.html2hscript(
+            FS.readFileSync(PATH.join(__dirname, "06-DataBasedAttributes/template.htm"), "utf8").replace(/^\s*|\s*$/g, ""),
+            {
+                "controlAttributes": {
+                    "prefix": "data-component-",
+                    "remove": true
+                }
+            },
+            function (err, chscript) {
+                if (err) return done(err);
+                compare("06-DataBasedAttributes/result-1", render(chscript, {
+                    "$views": {
+                        "focus": true
+                    },
+                    "item": [
+                        {
+                            "$views": {
+                                "active": true
+                            },
+                            "label": "Item 1"
                         }
                     ]
                 }));

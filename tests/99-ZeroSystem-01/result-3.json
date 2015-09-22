@@ -1,9 +1,7 @@
 {
     "tagName": "TABLE",
     "properties": {
-        "dataset": {
-            "componentImpl": "Table"
-        },
+        "dataset": {},
         "className": "ui striped table"
     },
     "children": [

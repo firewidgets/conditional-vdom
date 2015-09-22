@@ -51,20 +51,7 @@
                 },
                 {
                     "text": "\n    "
-                }
-            ],
-            "namespace": null,
-            "count": 7,
-            "hasWidgets": false,
-            "hasThunks": false,
-            "descendantHooks": false
-        },
-        {
-            "tagName": "UL",
-            "properties": {
-                "attributes": {}
-            },
-            "children": [
+                },
                 {
                     "text": "\n        "
                 },
@@ -108,7 +95,7 @@
                 }
             ],
             "namespace": null,
-            "count": 7,
+            "count": 14,
             "hasWidgets": false,
             "hasThunks": false,
             "descendantHooks": false
@@ -118,7 +105,7 @@
         }
     ],
     "namespace": null,
-    "count": 18,
+    "count": 17,
     "hasWidgets": false,
     "hasThunks": false,
     "descendantHooks": false

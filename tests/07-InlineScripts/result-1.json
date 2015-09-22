@@ -64,20 +64,7 @@
                         },
                         {
                             "text": "\n        "
-                        }
-                    ],
-                    "namespace": null,
-                    "count": 9,
-                    "hasWidgets": false,
-                    "hasThunks": false,
-                    "descendantHooks": false
-                },
-                {
-                    "tagName": "UL",
-                    "properties": {
-                        "dataset": {}
-                    },
-                    "children": [
+                        },
                         {
                             "text": "\n            "
                         },
@@ -143,7 +130,7 @@
                         }
                     ],
                     "namespace": null,
-                    "count": 11,
+                    "count": 20,
                     "hasWidgets": false,
                     "hasThunks": false,
                     "descendantHooks": false
@@ -172,7 +159,7 @@
                 }
             ],
             "namespace": null,
-            "count": 27,
+            "count": 26,
             "hasWidgets": false,
             "hasThunks": false,
             "descendantHooks": false
@@ -188,7 +175,7 @@
         }
     ],
     "namespace": null,
-    "count": 32,
+    "count": 31,
     "hasWidgets": false,
     "hasThunks": false,
     "descendantHooks": false

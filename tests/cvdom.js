@@ -304,7 +304,10 @@ describe('cvdom', function() {
                                         "$views": {
                                             "default": true
                                         },
-                                        "title": "Item 2"
+                                        get: function (name) {
+                                            if (name === "title") return "Item 2";
+                                            return "";
+                                        }
                                     }                                    
                                 ]
                             });

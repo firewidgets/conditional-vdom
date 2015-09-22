@@ -74,9 +74,7 @@
                 {
                     "tagName": "TABLE",
                     "properties": {
-                        "dataset": {
-                            "componentImpl": "Table"
-                        },
+                        "dataset": {},
                         "className": "ui striped table"
                     },
                     "children": [
@@ -216,20 +214,7 @@
                                 },
                                 {
                                     "text": "\n          "
-                                }
-                            ],
-                            "namespace": null,
-                            "count": 10,
-                            "hasWidgets": false,
-                            "hasThunks": false,
-                            "descendantHooks": false
-                        },
-                        {
-                            "tagName": "TBODY",
-                            "properties": {
-                                "dataset": {}
-                            },
-                            "children": [
+                                },
                                 {
                                     "text": "\n            "
                                 },
@@ -268,7 +253,7 @@
                                             },
                                             "children": [
                                                 {
-                                                    "text": "http://..."
+                                                    "text": ""
                                                 }
                                             ],
                                             "namespace": null,
@@ -292,7 +277,7 @@
                                 }
                             ],
                             "namespace": null,
-                            "count": 10,
+                            "count": 20,
                             "hasWidgets": false,
                             "hasThunks": false,
                             "descendantHooks": false
@@ -302,7 +287,7 @@
                         }
                     ],
                     "namespace": null,
-                    "count": 36,
+                    "count": 35,
                     "hasWidgets": false,
                     "hasThunks": false,
                     "descendantHooks": false
@@ -312,7 +297,7 @@
                 }
             ],
             "namespace": null,
-            "count": 39,
+            "count": 38,
             "hasWidgets": false,
             "hasThunks": false,
             "descendantHooks": false
@@ -328,7 +313,7 @@
         }
     ],
     "namespace": null,
-    "count": 53,
+    "count": 52,
     "hasWidgets": false,
     "hasThunks": false,
     "descendantHooks": false

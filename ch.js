@@ -12,29 +12,40 @@ module.exports = function (controllingState) {
 //console.log("conditionalControls", conditionalControls);
 
         function fillProperties (vtree) {
-
-            if (
-                typeof conditionalControls.property !== "undefined" &&
-                typeof controllingState[conditionalControls.property] !== "undefined"
-            ) {
-                vtree.children[0].text = controllingState[conditionalControls.property];
+            if (typeof conditionalControls.property !== "undefined") {
+                var val = null;
+                if (
+                    typeof controllingState.get === "function" &&
+                    typeof (val = controllingState.get(conditionalControls.property)) !== "undefined"
+                ) {
+//                    vtree.children[0].text = val;
+                    return val;
+                } else
+                if (typeof controllingState[conditionalControls.property] !== "undefined") {
+//                    vtree.children[0].text = controllingState[conditionalControls.property];
+                    return controllingState[conditionalControls.property];
+                }
             }
-//console.log("vtree", vtree);
             return vtree;
         }
 
 
-        if (
-            !conditionalSection &&
-            typeof conditionalControls.anchor !== "undefined"
-        ) {
+        if (typeof conditionalControls.anchor !== "undefined") {
+            var foundAnchor = null;
+            if (
+                controllingState["$anchors"] &&
+                typeof controllingState["$anchors"] === "function" &&
+                (foundAnchor = controllingState["$anchors"](conditionalControls.anchor))
+            ) {
+                conditionalSection = function () {
+                    return foundAnchor;
+                };
+            }
+        }
+        if (!conditionalSection) {
             conditionalSection = function () {
-                return ((
-                    controllingState["$anchors"] &&
-                    typeof controllingState["$anchors"] === "function" &&
-                    controllingState["$anchors"](conditionalControls.anchor)
-                ) || "");
-            };
+                return "";
+            }
         }
 
         if (

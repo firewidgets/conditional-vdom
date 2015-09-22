@@ -57,20 +57,7 @@
                 },
                 {
                     "text": "\n    "
-                }
-            ],
-            "namespace": null,
-            "count": 9,
-            "hasWidgets": false,
-            "hasThunks": false,
-            "descendantHooks": false
-        },
-        {
-            "tagName": "UL",
-            "properties": {
-                "attributes": {}
-            },
-            "children": [
+                },
                 {
                     "text": "\n        "
                 },
@@ -133,20 +120,7 @@
                 },
                 {
                     "text": "\n    "
-                }
-            ],
-            "namespace": null,
-            "count": 11,
-            "hasWidgets": false,
-            "hasThunks": false,
-            "descendantHooks": false
-        },
-        {
-            "tagName": "UL",
-            "properties": {
-                "attributes": {}
-            },
-            "children": [
+                },
                 {
                     "text": "\n        "
                 },
@@ -196,7 +170,7 @@
                 }
             ],
             "namespace": null,
-            "count": 9,
+            "count": 29,
             "hasWidgets": false,
             "hasThunks": false,
             "descendantHooks": false
@@ -225,7 +199,7 @@
         }
     ],
     "namespace": null,
-    "count": 37,
+    "count": 35,
     "hasWidgets": false,
     "hasThunks": false,
     "descendantHooks": false

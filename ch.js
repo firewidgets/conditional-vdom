@@ -23,6 +23,20 @@ module.exports = function (controllingState) {
             return vtree;
         }
 
+
+        if (
+            !conditionalSection &&
+            typeof conditionalControls.anchor !== "undefined"
+        ) {
+            conditionalSection = function () {
+                return ((
+                    controllingState["$anchors"] &&
+                    typeof controllingState["$anchors"] === "function" &&
+                    controllingState["$anchors"](conditionalControls.anchor)
+                ) || "");
+            };
+        }
+
         if (
             conditionalControls.section &&
             controllingState[conditionalControls.section] &&
@@ -33,6 +47,13 @@ module.exports = function (controllingState) {
             var parentControllingState = controllingState;
             var result = controllingState[conditionalControls.section].map(function (subConditionalControls) {
                 controllingState = Object.create(subConditionalControls);
+
+                // Inherit anchors to data sub-nodes
+                if (parentControllingState["$anchors"]) {
+                    if (typeof controllingState["$anchors"] === "undefined") {
+                        controllingState["$anchors"] = parentControllingState["$anchors"];
+                    }
+                }
 
                 // Inherit views to data sub-nodes
                 if (parentControllingState["$views"]) {

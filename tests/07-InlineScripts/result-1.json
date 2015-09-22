@@ -7,11 +7,7 @@
         },
         {
             "tagName": "DIV",
-            "properties": {
-                "dataset": {
-                    "componentId": "list"
-                }
-            },
+            "properties": {},
             "children": [
                 {
                     "text": "\n        "
@@ -185,11 +181,14 @@
             "text": "\n    \n    "
         },
         {
+            "text": "\n    "
+        },
+        {
             "text": "\n"
         }
     ],
     "namespace": null,
-    "count": 31,
+    "count": 32,
     "hasWidgets": false,
     "hasThunks": false,
     "descendantHooks": false

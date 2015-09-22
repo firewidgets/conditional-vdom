@@ -1,0 +1,163 @@
+{
+    "tagName": "TABLE",
+    "properties": {
+        "dataset": {
+            "componentImpl": "Table"
+        },
+        "className": "ui striped table"
+    },
+    "children": [
+        {
+            "text": "\n          "
+        },
+        {
+            "tagName": "THEAD",
+            "properties": {},
+            "children": [
+                {
+                    "text": "\n            "
+                },
+                {
+                    "tagName": "TR",
+                    "properties": {},
+                    "children": [
+                        {
+                            "text": "\n              "
+                        },
+                        {
+                            "tagName": "TH",
+                            "properties": {},
+                            "children": [
+                                {
+                                    "text": "Col 1"
+                                }
+                            ],
+                            "namespace": null,
+                            "count": 1,
+                            "hasWidgets": false,
+                            "hasThunks": false,
+                            "descendantHooks": false
+                        },
+                        {
+                            "text": "\n              "
+                        },
+                        {
+                            "tagName": "TH",
+                            "properties": {},
+                            "children": [
+                                {
+                                    "text": "Col 2"
+                                }
+                            ],
+                            "namespace": null,
+                            "count": 1,
+                            "hasWidgets": false,
+                            "hasThunks": false,
+                            "descendantHooks": false
+                        },
+                        {
+                            "text": "\n            "
+                        }
+                    ],
+                    "namespace": null,
+                    "count": 7,
+                    "hasWidgets": false,
+                    "hasThunks": false,
+                    "descendantHooks": false
+                },
+                {
+                    "text": "\n          "
+                }
+            ],
+            "namespace": null,
+            "count": 10,
+            "hasWidgets": false,
+            "hasThunks": false,
+            "descendantHooks": false
+        },
+        {
+            "text": "\n          "
+        },
+        {
+            "tagName": "TBODY",
+            "properties": {
+                "dataset": {}
+            },
+            "children": [
+                {
+                    "text": "\n            "
+                },
+                {
+                    "tagName": "TR",
+                    "properties": {
+                        "dataset": {}
+                    },
+                    "children": [
+                        {
+                            "text": "\n              "
+                        },
+                        {
+                            "tagName": "TD",
+                            "properties": {
+                                "dataset": {}
+                            },
+                            "children": [
+                                {
+                                    "text": "Item 1"
+                                }
+                            ],
+                            "namespace": null,
+                            "count": 1,
+                            "hasWidgets": false,
+                            "hasThunks": false,
+                            "descendantHooks": false
+                        },
+                        {
+                            "text": "\n              "
+                        },
+                        {
+                            "tagName": "TD",
+                            "properties": {
+                                "dataset": {}
+                            },
+                            "children": [
+                                {
+                                    "text": "http://test.com/item1"
+                                }
+                            ],
+                            "namespace": null,
+                            "count": 1,
+                            "hasWidgets": false,
+                            "hasThunks": false,
+                            "descendantHooks": false
+                        },
+                        {
+                            "text": "\n            "
+                        }
+                    ],
+                    "namespace": null,
+                    "count": 7,
+                    "hasWidgets": false,
+                    "hasThunks": false,
+                    "descendantHooks": false
+                },
+                {
+                    "text": "\n          "
+                }
+            ],
+            "namespace": null,
+            "count": 10,
+            "hasWidgets": false,
+            "hasThunks": false,
+            "descendantHooks": false
+        },
+        {
+            "text": "\n        "
+        }
+    ],
+    "namespace": null,
+    "count": 25,
+    "hasWidgets": false,
+    "hasThunks": false,
+    "descendantHooks": false
+}

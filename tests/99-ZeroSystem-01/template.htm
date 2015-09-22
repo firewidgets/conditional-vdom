@@ -1,0 +1,33 @@
+
+<div>
+    <div class="filter">
+        <div data-component-id="filter">
+            <div data-component-prop="options">Filter options</div>
+        </div>
+    </div>
+    
+    <div class="table">
+        <table data-component-id="table" class="ui striped table" data-component-impl="Table">
+          <thead>
+            <tr>
+              <th>Col 1</th>
+              <th>Col 2</th>
+            </tr>
+          </thead>
+          <tbody data-component-section="row">
+            <tr data-component-section="row" data-component-view="default">
+              <td data-component-prop="title">Title 1</td>
+              <td data-component-prop="url">http://...</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <script data-component-id="table" data-component-location="window">
+    context.wireComponent({});
+    </script>
+    
+    <script data-component-id="table" data-component-location="server">
+    context.wireComponent({});
+    </script>
+</div>

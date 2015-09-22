@@ -1,0 +1,35 @@
+{
+    "tagName": "DIV",
+    "properties": {
+        "dataset": {}
+    },
+    "children": [
+        {
+            "text": "\n            "
+        },
+        {
+            "tagName": "DIV",
+            "properties": {
+                "dataset": {}
+            },
+            "children": [
+                {
+                    "text": "[Options 1, Options 2]"
+                }
+            ],
+            "namespace": null,
+            "count": 1,
+            "hasWidgets": false,
+            "hasThunks": false,
+            "descendantHooks": false
+        },
+        {
+            "text": "\n        "
+        }
+    ],
+    "namespace": null,
+    "count": 4,
+    "hasWidgets": false,
+    "hasThunks": false,
+    "descendantHooks": false
+}

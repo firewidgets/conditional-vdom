@@ -1,0 +1,1 @@
+h("div", [ "\n    ", ch({"view":"default"}, function () { return h("div", {"attributes":{}}, [ "\n        Default\n    " ]); }), "\n" ])

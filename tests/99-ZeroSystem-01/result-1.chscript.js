@@ -1,0 +1,1 @@
+h("div", [ "\n    ", h("div.filter", [ "\n        ", ch({"anchor":"filter"}), "\n    " ]), "\n    \n    ", h("div.table", [ "\n        ", ch({"anchor":"table"}), "\n    " ]), "\n\n    ", "\n    \n    ", "\n" ])

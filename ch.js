@@ -67,7 +67,7 @@ module.exports = function (controllingState) {
             }
 
             if (typeof conditionalControls.property !== "undefined") {
-                var val = getter(conditionalControls.property );
+                var val = getter(conditionalControls.property);
                 if (typeof val !== "undefined") {
                     return setValueAndReturn(val);
                 }

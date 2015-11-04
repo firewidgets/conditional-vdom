@@ -25,7 +25,7 @@ The `cvdom` approach (conditions + hyperscript) is compatible with the [domplate
 
 The goal of `cvdom` is to provide a thin layer on top of hyperscript that allows for conditional and repeated control of sections using a JSON control object or equivalent module hooks that plays nice with the `hyperscript` JSON intermediate representation and `h` runtime library.
 
-Ultimately one should be able to write an adapter to run existing `domplate` modules using the `cvdom` implementation vs the generated `dompalte` templates and also compile templates written in other formats to `cvdom` and then to a `domplate` runtime template.
+Ultimately one should be able to write an adapter to run existing `domplate` modules using the `cvdom` implementation vs the generated `domplate` templates and also compile templates written in other formats to `cvdom` and then to a `domplate` runtime template.
 
 `domplate` is important because it uses a runtime representation that does NOT reflect original source logic details. i.e. Its a runtime format that can be used to keep hard-earned higher order logic hidden as it is removed in the compile process. `hscript` has the same benefit but ultimately `domplate` compiles closer to the DOM due to it also directly dealing with event handlers.
 

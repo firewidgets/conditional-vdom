@@ -6,7 +6,7 @@ exports.makeLib = function () {
         fs: require("fs"),
         _: require("lodash"),
         cvdom: exports,
-        html2hscript: require("../html2chscript"),
+        html2hscript: require("html2chscript"),
         h: require("virtual-dom/h"),
         ch: require("./ch")
     }

@@ -36,37 +36,53 @@ module.exports = function (controllingState) {
                 return value;
             }
 
+
+
+            // Replace dynamic attribute values.
+            // NOTE: This is slow on large trees.
+            // TODO: Do this more elegantly during template parsing.
+            function forObject (obj) {
+                for (var name in obj) {
+                    if (typeof obj[name] !== "string") continue;
+                    var re = /\\?{\\?{([^}\\]+)\\?}\\?}/g;
+    				var m = null;
+    				while ( (m = re.exec(obj[name])) ) {
+    				    obj[name] = obj[name].replace(m[0], getter(m[1]));
+    				}
+                }
+            }
+            function forNode (node) {
+                if (!node || !node.properties) return;
+                if (node.properties.style) {
+                    forObject(node.properties.style);
+                }
+                if (node.properties.attributes) {
+                    forObject(node.properties.attributes);
+                }
+                if (node.properties.dataset) {
+                    forObject(node.properties.dataset);
+                }
+                // TODO: Only go as deep as next component (which will change 'getter' to access deeper data)
+                if (node.children) {
+                    node.children.forEach(forNode);
+                }
+            }
             if (Array.isArray(vtree)) {
-                // TODO: Do this more elegantly during template parsing.
-                function forObject (obj) {
-                    for (var name in obj) {
-                        if (typeof obj[name] !== "string") continue;
-                        var re = /{{([^}]+)}}/g;
-        				var m = null;
-        				while ( (m = re.exec(obj[name])) ) {
-        				    obj[name] = obj[name].replace(m[0], getter(m[1]));
-        				}
-                    }
-                }
-                function forNodes (nodes) {
-                    nodes.forEach(function (node) {
-                        if (!node || !node.properties) return;
-                        if (node.properties.attributes) {
-                            forObject(node.properties.attributes);
-                        }
-                        if (node.properties.dataset) {
-                            forObject(node.properties.dataset);
-                        }
-                        // TODO: Only go as deep as next component (which will change 'getter' to access deeper data)
-                        if (node.children) {
-                            forNodes(node.children);
-                        }
-                    });
-                }
-                forNodes(vtree);
+                vtree.forEach(forNode);
+            } else
+            if (
+                typeof vtree === "object" &&
+                vtree.tagName
+            ) {
+                forNode(vtree);
             }
 
-            if (typeof conditionalControls.property !== "undefined") {
+
+
+            if (
+                typeof conditionalControls.property !== "undefined" &&
+                typeof conditionalControls.propertyTarget === "undefined"
+            ) {
                 var val = getter(conditionalControls.property);
                 if (typeof val !== "undefined") {
                     return setValueAndReturn(val);

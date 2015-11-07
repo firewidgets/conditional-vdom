@@ -4,8 +4,14 @@
         <li component:section="item" component:view="default">
             <span component:prop="label">Label</span>
         </li>
+        <li component:section="item" component:view="default">
+            Should be ignored as there can only be one 'section + view' named tpl
+        </li>
         <li component:section="item" component:view="active">
             <span component:prop="label">Label</span> (active)
+        </li>
+        <li>
+            Should be ignored
         </li>
     </ul>
 </div>

@@ -27,7 +27,7 @@ exports.forLib = function (LIB) {
             cjsCode.push(  'getLayout: function () {');
             cjsCode.push(    'return {');
             cjsCode.push(      'buildVTree: function (h, ch) {');
-            cjsCode.push(        'return ' + chscript + ';');
+            cjsCode.push(        'return ch({}, function () { return ' + chscript + '; });');
             cjsCode.push(      '}');
             cjsCode.push(    '};');
             cjsCode.push(  '},');
@@ -36,7 +36,7 @@ exports.forLib = function (LIB) {
             Object.keys(components).forEach(function (id, i) {
                 cjsCode.push(      (i>0?",":"") + '"' + id + '": {');
                 cjsCode.push(        'buildVTree: function (h, ch) {');
-                cjsCode.push(          'return ' + components[id].chscript + ';');
+                cjsCode.push(          'return ch({}, function () { return ' + components[id].chscript + '; });');
                 cjsCode.push(        '}');
                 cjsCode.push(      '}');
             });

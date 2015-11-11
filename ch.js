@@ -44,11 +44,15 @@ module.exports = function (controllingState) {
             function forObject (obj) {
                 for (var name in obj) {
                     if (typeof obj[name] !== "string") continue;
-                    var re = /\\?{\\?{([^}\\]+)\\?}\\?}/g;
-    				var m = null;
-    				while ( (m = re.exec(obj[name])) ) {
-    				    obj[name] = obj[name].replace(m[0], getter(m[1]));
-    				}
+                    [
+                        /\\{\\{([^}\\]+)\\}\\}/g,
+                        /{{([^}\\]+)}}/g
+                    ].forEach(function (re) {
+        				var m = null;
+        				while ( (m = re.exec(obj[name])) ) {
+        				    obj[name] = obj[name].replace(m[0], getter(m[1]));
+        				}
+                    });
                 }
             }
             function forNode (node) {

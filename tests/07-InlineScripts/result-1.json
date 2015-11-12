@@ -33,7 +33,9 @@
                                 {
                                     "tagName": "SPAN",
                                     "properties": {
-                                        "dataset": {}
+                                        "dataset": {
+                                            "componentProp": "label"
+                                        }
                                     },
                                     "children": [
                                         {
@@ -83,7 +85,9 @@
                                 {
                                     "tagName": "SPAN",
                                     "properties": {
-                                        "dataset": {}
+                                        "dataset": {
+                                            "componentProp": "label"
+                                        }
                                     },
                                     "children": [
                                         {

@@ -10,7 +10,9 @@
         {
             "tagName": "DIV",
             "properties": {
-                "dataset": {}
+                "dataset": {
+                    "componentProp": "options"
+                }
             },
             "children": [
                 {

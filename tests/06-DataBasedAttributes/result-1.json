@@ -29,7 +29,9 @@
                         {
                             "tagName": "SPAN",
                             "properties": {
-                                "dataset": {}
+                                "dataset": {
+                                    "componentProp": "label"
+                                }
                             },
                             "children": [
                                 {

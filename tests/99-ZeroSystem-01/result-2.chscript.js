@@ -1,1 +1,1 @@
-h("div", {"dataset":{}}, ch({"id":"filter"}, function () { return [ "\n            ", h("div", {"dataset":{}}, ch({"property":"options"}, function () { return [ "Filter options" ]; })), "\n        " ]; }))
+h("div", {"dataset":{}}, ch({"id":"filter"}, function () { return [ "\n            ", h("div", {"dataset":{"componentProp":"options"}}, ch({"property":"options"}, function () { return [ "Filter options" ]; })), "\n        " ]; }))

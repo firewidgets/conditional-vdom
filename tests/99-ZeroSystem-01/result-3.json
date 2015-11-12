@@ -97,7 +97,9 @@
                         {
                             "tagName": "TD",
                             "properties": {
-                                "dataset": {}
+                                "dataset": {
+                                    "componentProp": "title"
+                                }
                             },
                             "children": [
                                 {
@@ -116,7 +118,9 @@
                         {
                             "tagName": "TD",
                             "properties": {
-                                "dataset": {}
+                                "dataset": {
+                                    "componentProp": "url"
+                                }
                             },
                             "children": [
                                 {

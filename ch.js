@@ -25,6 +25,9 @@ module.exports = function (controllingState) {
             }
 
             function setValueAndReturn (value) {
+                if (typeof value === "undefined") {
+                    value = "";
+                }
                 if (
                     vtree &&
                     vtree.children &&
@@ -35,7 +38,6 @@ module.exports = function (controllingState) {
                 }
                 return value;
             }
-
 
 
             // Replace dynamic attribute values.
@@ -49,8 +51,13 @@ module.exports = function (controllingState) {
                         /{{([^}\\]+)}}/g
                     ].forEach(function (re) {
         				var m = null;
+        				var val = null;
         				while ( (m = re.exec(obj[name])) ) {
-        				    obj[name] = obj[name].replace(m[0], getter(m[1]));
+        				    val = getter(m[1]);
+        				    if (typeof val === "undefined") {
+        				        val = "";
+        				    }
+        				    obj[name] = obj[name].replace(m[0], val);
         				}
                     });
                 }
@@ -82,15 +89,13 @@ module.exports = function (controllingState) {
             }
 
 
-
             if (
                 typeof conditionalControls.property !== "undefined" &&
                 typeof conditionalControls.propertyTarget === "undefined"
             ) {
-                var val = getter(conditionalControls.property);
-                if (typeof val !== "undefined") {
-                    return setValueAndReturn(val);
-                }
+                return setValueAndReturn(
+                    getter(conditionalControls.property)
+                );
             }
 
             return vtree;

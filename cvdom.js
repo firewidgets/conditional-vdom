@@ -24,8 +24,14 @@ exports.forLib = function (LIB) {
 
             var cjsCode = [];
             cjsCode.push('module.exports = {');
+            if (options.templateId) {
+                cjsCode.push(  'id: "' + options.templateId + '",');
+            }
             cjsCode.push(  'getLayout: function () {');
             cjsCode.push(    'return {');
+            if (options.templateId) {
+                cjsCode.push(  'id: "' + options.templateId + '",');
+            }
             cjsCode.push(      'buildVTree: function (h, ch) {');
             cjsCode.push(        'return ch({}, function () { return ' + chscript + '; });');
             cjsCode.push(      '}');

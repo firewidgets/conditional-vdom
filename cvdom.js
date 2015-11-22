@@ -15,6 +15,8 @@ exports.makeLib = function () {
 
 exports.forLib = function (LIB) {
 
+    const CRYPTO = require("crypto");
+
     function html2chscript (html, options, callback) {
 
         html = html.replace(/^\s*|\s*$/g, "");
@@ -24,14 +26,10 @@ exports.forLib = function (LIB) {
 
             var cjsCode = [];
             cjsCode.push('module.exports = {');
-            if (options.templateId) {
-                cjsCode.push(  'id: "' + options.templateId + '",');
-            }
+            cjsCode.push(  'id: "%%__WIDGET_HASH_ID__%%",');
             cjsCode.push(  'getLayout: function () {');
             cjsCode.push(    'return {');
-            if (options.templateId) {
-                cjsCode.push(  'id: "' + options.templateId + '",');
-            }
+            cjsCode.push(      'id: "%%__WIDGET_HASH_ID__%%",');
             cjsCode.push(      'buildVTree: function (h, ch) {');
             cjsCode.push(        'return ch({}, function () { return ' + chscript + '; });');
             cjsCode.push(      '}');
@@ -41,6 +39,7 @@ exports.forLib = function (LIB) {
             cjsCode.push(    'return {');
             Object.keys(components).forEach(function (id, i) {
                 cjsCode.push(      (i>0?",":"") + '"' + id + '": {');
+                cjsCode.push(        'id: "' + id + ':%%__WIDGET_HASH_ID__%%",');
                 cjsCode.push(        'buildVTree: function (h, ch) {');
                 cjsCode.push(          'return ch({}, function () { return ' + components[id].chscript + '; });');
                 cjsCode.push(        '}');
@@ -60,7 +59,10 @@ exports.forLib = function (LIB) {
             cjsCode.push(  '}');
             cjsCode.push('};');
 
-            return callback(null, chscript, components, inlineScripts, cjsCode.join("\n"));
+            cjsCode = cjsCode.join("\n");
+            cjsCode = cjsCode.replace(/%%__WIDGET_HASH_ID__%%/g, (options.templateId || "") + ":" + CRYPTO.createHash("sha1").update(cjsCode).digest('hex'));
+
+            return callback(null, chscript, components, inlineScripts, cjsCode);
         });
     }
 
